@@ -41,7 +41,6 @@ const webpackConfig = (env) => {
         plugins: [
             new CopyWebpackPlugin({
                 patterns: [
-                    // { from: 'public/!(index\.html)' }
                     {
                         from: 'src/*.*',
                         globOptions: {
@@ -54,7 +53,7 @@ const webpackConfig = (env) => {
                 ],
             }),
             new HtmlWebpackPlugin({
-                title: 'qapita-fund',
+                title: 'weather-app',
                 template: './src/index.html',
             }),
         ],
