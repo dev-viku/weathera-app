@@ -1,0 +1,89 @@
+.cities-wrapper{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    .header-container{
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        height: 50px;
+        border-bottom: 1px solid #e5e5e5;
+        padding: 10px;
+        font: normal bold 18px/24px Lato;
+        .add-btn{
+            cursor: pointer;
+        }
+    }
+    .left-container{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e5e5e5;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        height: calc(100vh - 50px);
+        .body-container{
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            overflow: scroll;
+            scrollbar-width: none;
+            -ms-overflow-style: none;
+            height: calc(100vh - 110px);
+            &:last-child{
+                margin-bottom: 10px;
+            }
+            .city-details-row{
+                display: flex;
+                padding: 5px 10px;
+                justify-content: center;
+                flex-direction: column;
+                border: 1px solid #e5e5e5;
+                margin-top: 10px;
+                cursor: pointer;
+                &:hover{
+                    background: #e5e5e5;
+                }
+            }
+            .none-select-city-text{
+                padding: 10px 10px;
+            }
+        }
+    }
+    .right-container{
+        width: 64%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #e5e5e5;
+        box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+        height: calc(100vh - 50px);
+        .favorite-icon{
+            display: flex;
+            justify-content: flex-end;
+            cursor: pointer;
+            img{
+                width: 22px;
+                height: 22px;
+            }
+        }
+        .city-body-container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: 10px;
+            height: calc(100vh - 300px);
+            .desc-container{
+                color: green;
+                margin-bottom: 10px;
+            }
+            span{
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+.body-container::-webkit-scrollbar {
+    display: none;
+}

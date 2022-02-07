@@ -1,0 +1,23 @@
+@import '../abstracts/variables';
+/**
+ * scrollbar.scss
+ */
+.scrollbar {
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: $color-grey;
+    }
+  }
+
+  &::-webkit-scrollbar {
+    visibility: hidden;
+    width: 2px;
+    height: 2px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $color-grey;
+    transition: 0.5s ease;
+  }
+}
+

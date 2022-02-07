@@ -1,0 +1,51 @@
+@import "../../../assets/scss/abstracts/variables";
+
+body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.dashboard-wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: #FBFBFF;
+    padding: 0px;
+    margin: 0px;
+    top: 0;
+    left: 0;
+    .dashboard-body-section {
+        display: flex;
+        .sidebar-section {
+            width: 92px;
+            height: 100vh;
+            @media screen and (max-width: $medium) {
+                width: 100vw;
+                height: 76px;
+            }
+        }
+        .main-content {
+            width: calc(100vw - 96px);
+            height: calc(100vh - 80px);
+            padding: 20px;
+            @media screen and (max-width: $medium) {
+                height: calc(100vh - 144px);
+                width: 100%;
+                padding: 0px;
+                background: #FBFBFF;
+            }
+        }
+        @media screen and (max-width: $medium) {
+            display: flex;
+            flex-direction: column-reverse;
+            height: calc(100vh - 64px);
+            margin-top: 64px;
+        }
+    }
+    @media screen and (max-width: $medium) {
+        width: 100vw;
+        display: flex;
+        background: white;
+    }
+}

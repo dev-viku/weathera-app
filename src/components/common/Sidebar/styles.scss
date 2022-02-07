@@ -1,0 +1,60 @@
+@import "../../../../assets/scss/abstracts/variables";
+
+.sidebar-wrapper {
+  width: 100%;
+  height: 100%;
+  background: $primary-color-purple;
+  display: flex;
+  flex-direction: column;
+  .sidebar-active-tab {
+    width: 100%;
+    height: 64px;
+    background: #ffce5e;
+    // padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 500;
+    color: $primary-color-purple;
+    .title {
+      color: $primary-color-purple;
+    }
+    @media screen and (max-width: $medium) {
+      width: 25%;
+      height: 76px;
+    }
+  }
+  .sidebar-inactive-tab {
+    width: 100%;
+    height: 64px;
+    // background: #FFCE5E;
+    // padding: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    font-weight: 500;
+    .title {
+      color: #ae9bcf;
+    }
+    @media screen and (max-width: $medium) {
+      width: 25%;
+      height: 76px;
+    }
+  }
+
+  @media screen and (max-width: $medium) {
+    width: 100%;
+    height: 76px;
+    background: $primary-color-purple;
+    display: flex;
+    flex-direction: row;
+  }
+}

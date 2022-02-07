@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap");
+body {
+  font-family: $font-family-roboto;
+  margin: 0;
+  font-size: 14px;
+  color: $font-primary;
+  background-color: #e5e5e5;
+}
+a:hover {
+  text-decoration: none;
+  color: $primary-color-purple;
+}
+a {
+  text-decoration: none;
+  color: $primary-color-purple;
+}
+::selection {
+  color: $color-white;
+  background: $primary-color-purple;
+}
+
+@media all and (min-width: 768px) {
+  .visible-xs {
+    display: none;
+  }
+}
+@media all and (max-width: 768px) {
+  .visible-lg {
+    display: none;
+  }
+}
+
+section.ant-layout.main-section {
+  height: calc(100vh - 64px);
+  overflow-y: scroll;
+  padding: 15px;
+}
+
+.ant-modal {
+  height: calc(100% - 3.5rem);
+
+  .ant-modal-content {
+    overflow: hidden;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .ant-modal-body {
+    overflow-y: auto;
+  }
+}
