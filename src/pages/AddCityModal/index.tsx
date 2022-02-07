@@ -66,6 +66,17 @@ const AddCityModal: React.FC<AddCityModalProps> = ({ show, handleClose }) => {
         }
     };
 
+    const debounce = (func: (e: any) => void, delay: number) => {
+        let timer: any;
+        return (e: any) => {
+            console.log(e.target.value);
+            clearTimeout(timer);
+            setTimeout(() => {
+                func(e);
+            }, delay);
+        };
+    };
+
     const handleCitySearch = (e: any) => {
         const searchTxt = e.target.value;
         setSearchText(searchTxt);
@@ -78,6 +89,8 @@ const AddCityModal: React.FC<AddCityModalProps> = ({ show, handleClose }) => {
         );
         setAllCities(filteredCities);
     };
+
+    const searchCity = debounce(handleCitySearch, 500);
 
     const handleAddCity = (city: CitiesData) => {
         const found = selectedCities.some((selectedCity: CitiesData) => selectedCity.id === city.id);
@@ -97,12 +110,7 @@ const AddCityModal: React.FC<AddCityModalProps> = ({ show, handleClose }) => {
         return (
             <div className="void-approval-container">
                 <div className="row-1-approval">
-                    <Input
-                        placeholder="search city"
-                        style={{ width: 300 }}
-                        value={searchText}
-                        onChange={(e) => handleCitySearch(e)}
-                    />
+                    <Input placeholder="search city" style={{ width: 300 }} onChange={searchCity} />
                 </div>
                 <div className="row-2-approval">
                     {allCities.map((city) => {
